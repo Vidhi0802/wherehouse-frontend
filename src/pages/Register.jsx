@@ -82,7 +82,7 @@ const Register = () => {
   const handleClick = () => {
     const {firstName, lastName, username, email, password, confirmPassword} = user
     if(firstName && lastName && username && email && password && (password === confirmPassword)) {
-      axios.post("http://localhost:9002/register", user)
+      axios.post("https://wherehouse-api.onrender.com/register", user)
       .then(res => alert(res.data.message))
       navigate("../login", { replace: true })
     } else {
